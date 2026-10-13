@@ -14,6 +14,15 @@ app = FastAPI(
 app.include_router(resources_router)
 
 
+@app.get("/", tags=["root"])
+def root() -> dict[str, str]:
+    return {
+        "name": "Cloud Resource Janitor",
+        "status": "running",
+        "documentation": "/docs",
+    }
+
+
 @app.get("/health", tags=["health"])
 def health_check() -> dict[str, str]:
     return {
