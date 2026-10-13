@@ -1,0 +1,151 @@
+[
+  {
+    "id": "i-0a1b2c3d4e5f00001",
+    "name": "production-web-server",
+    "cloud": "aws",
+    "resource_type": "ec2_instance",
+    "region": "us-east-1",
+    "state": "running",
+    "tags": {
+      "owner": "platform-team",
+      "environment": "production",
+      "protected": "true"
+    },
+    "created_at": "2026-01-10T14:30:00Z",
+    "last_activity": "2026-10-11T18:00:00Z",
+    "estimated_monthly_cost": 68.5
+  },
+  {
+    "id": "i-0a1b2c3d4e5f00002",
+    "name": "development-api-server",
+    "cloud": "aws",
+    "resource_type": "ec2_instance",
+    "region": "us-east-1",
+    "state": "stopped",
+    "tags": {
+      "environment": "development"
+    },
+    "created_at": "2026-04-15T09:00:00Z",
+    "last_activity": "2026-08-01T11:45:00Z",
+    "estimated_monthly_cost": 12.0
+  },
+  {
+    "id": "vol-0a1b2c3d4e5f00001",
+    "name": "production-database-volume",
+    "cloud": "aws",
+    "resource_type": "ebs_volume",
+    "region": "us-east-1",
+    "state": "attached",
+    "tags": {
+      "owner": "database-team",
+      "environment": "production",
+      "protected": "true"
+    },
+    "created_at": "2025-11-20T16:00:00Z",
+    "last_activity": "2026-10-12T08:15:00Z",
+    "estimated_monthly_cost": 24.0
+  },
+  {
+    "id": "vol-0a1b2c3d4e5f00002",
+    "name": "old-test-volume",
+    "cloud": "aws",
+    "resource_type": "ebs_volume",
+    "region": "us-west-2",
+    "state": "unattached",
+    "tags": {
+      "environment": "test"
+    },
+    "created_at": "2026-02-05T10:20:00Z",
+    "last_activity": null,
+    "estimated_monthly_cost": 8.0
+  },
+  {
+    "id": "arn:aws:s3:::janitor-demo-archive",
+    "name": "janitor-demo-archive",
+    "cloud": "aws",
+    "resource_type": "s3_bucket",
+    "region": "us-east-1",
+    "state": "available",
+    "tags": {
+      "owner": "vinaya",
+      "environment": "development"
+    },
+    "created_at": "2026-06-01T12:00:00Z",
+    "last_activity": "2026-07-15T17:30:00Z",
+    "estimated_monthly_cost": 2.35
+  },
+  {
+    "id": "/subscriptions/demo/resourceGroups/prod-rg/providers/Microsoft.Compute/virtualMachines/prod-app-vm",
+    "name": "prod-app-vm",
+    "cloud": "azure",
+    "resource_type": "virtual_machine",
+    "region": "eastus",
+    "state": "running",
+    "tags": {
+      "owner": "application-team",
+      "environment": "production",
+      "protected": "true"
+    },
+    "created_at": "2026-01-25T13:00:00Z",
+    "last_activity": "2026-10-12T15:10:00Z",
+    "estimated_monthly_cost": 74.0
+  },
+  {
+    "id": "/subscriptions/demo/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/test-worker-vm",
+    "name": "test-worker-vm",
+    "cloud": "azure",
+    "resource_type": "virtual_machine",
+    "region": "eastus2",
+    "state": "stopped",
+    "tags": {
+      "environment": "test"
+    },
+    "created_at": "2026-03-10T08:45:00Z",
+    "last_activity": "2026-07-20T13:30:00Z",
+    "estimated_monthly_cost": 18.5
+  },
+  {
+    "id": "/subscriptions/demo/resourceGroups/prod-rg/providers/Microsoft.Compute/disks/prod-data-disk",
+    "name": "prod-data-disk",
+    "cloud": "azure",
+    "resource_type": "managed_disk",
+    "region": "eastus",
+    "state": "attached",
+    "tags": {
+      "owner": "database-team",
+      "environment": "production",
+      "protected": "true"
+    },
+    "created_at": "2025-12-05T19:00:00Z",
+    "last_activity": "2026-10-12T12:45:00Z",
+    "estimated_monthly_cost": 19.2
+  },
+  {
+    "id": "/subscriptions/demo/resourceGroups/dev-rg/providers/Microsoft.Compute/disks/unused-dev-disk",
+    "name": "unused-dev-disk",
+    "cloud": "azure",
+    "resource_type": "managed_disk",
+    "region": "centralus",
+    "state": "unattached",
+    "tags": {
+      "environment": "development"
+    },
+    "created_at": "2026-04-01T10:00:00Z",
+    "last_activity": null,
+    "estimated_monthly_cost": 10.25
+  },
+  {
+    "id": "/subscriptions/demo/resourceGroups/dev-rg/providers/Microsoft.Storage/storageAccounts/janitordemostorage",
+    "name": "janitordemostorage",
+    "cloud": "azure",
+    "resource_type": "storage_account",
+    "region": "eastus",
+    "state": "available",
+    "tags": {
+      "owner": "cloud-team"
+    },
+    "created_at": "2026-05-18T14:15:00Z",
+    "last_activity": "2026-09-30T21:00:00Z",
+    "estimated_monthly_cost": 4.75
+  }
+]
