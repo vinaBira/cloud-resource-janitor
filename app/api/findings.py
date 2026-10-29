@@ -1,4 +1,5 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Query
+from typing import Literal
 
 from app.collectors import MockCollector
 from app.models import finding
@@ -9,9 +10,25 @@ router = APIRouter(
     tags=["findings"],
 )
 
+Severity = Literal["low", "medium", "high"]
+
 @router.get("", response_model=list[finding])
-def list_findings() -> list[finding]:
+def list_findings(
+    severity: Severity | None = Query(
+        default=None,
+        description="Optionally filter findings by severity.",
+    ),
+) -> list[finding]:
     """Evaluate mock resources and return governance findings."""
 
     resources = MockCollector().collect()
     return evaluate_resources(resources)
+
+    if severity is None:
+        return findings
+
+    return [
+        finding
+        for finding in findings
+        if finding.severity == severity
+    ]
